@@ -1,0 +1,101 @@
+<html>
+  <div id="container">
+    <h1>&bull; Sintomatologia &bull;</h1>
+    <div class="underline">
+    </div>
+    <div class="icon_wrapper">
+  
+  
+      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon" viewBox="0 0 90 90"  >
+   <path fill="#231F20" d="M60,16H48V4c0-2.211-1.789-4-4-4H20c-2.211,0-4,1.789-4,4v12H4c-2.211,0-4,1.789-4,4v40c0,2.211,1.789,4,4,4
+     h56c2.211,0,4-1.789,4-4V20C64,17.789,62.211,16,60,16z M24,8h16v8H24V8z M40,44h-4v4c0,2.211-1.789,4-4,4s-4-1.789-4-4v-4h-4
+     c-2.211,0-4-1.789-4-4s1.789-4,4-4h4v-4c0-2.211,1.789-4,4-4s4,1.789,4,4v4h4c2.211,0,4,1.789,4,4S42.211,44,40,44z"/>
+   </svg>
+   
+    </div>
+    <form action="#" method="post" id="contact_form">
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="text" placeholder="Motivo de Consulta" name="telephone" id="telephone_input" required  [(ngModel)]="motiv">
+      </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="text" placeholder="Enfermedad o problema actual" name="telephone" id="telephone_input" required [(ngModel)]="problemac">
+      </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="text" placeholder="Antecedentes Personales" name="telephone" id="telephone_input" required [(ngModel)]="antper">
+      </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="text" placeholder="Antecedentes Familiares" name="telephone" id="telephone_input" readonly>
+        
+      </div>
+
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="checkbox" [(ngModel)]="isChecked0" name="sin1" value="hola">  Cardiopatia
+      </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="checkbox" [(ngModel)]="isChecked1" name="sin2" value="hola">  Diabetes
+      </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="checkbox" [(ngModel)]="isChecked2" name="sin3" value="hola">  Encefalo cardiovascular
+      </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="checkbox" [(ngModel)]="isChecked3" name="sin4" value="hola">  Hipertension
+      </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="checkbox" [(ngModel)]="isChecked4" name="sin5" value="hola">  Cancer
+      </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="checkbox" [(ngModel)]="isChecked5" name="sin6" value="hola">  Tuberculosis
+      </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="checkbox" [(ngModel)]="isChecked6" name="Csin7" value="hola">  Enfermedad Mental
+      </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="checkbox" [(ngModel)]="isChecked7" name="sin8" value="hola">  Enfermedad Infecciosa
+      </div>
+      
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="submit" value="Generar"  (click)="createPdf()">
+      </div>
+
+      
+      <!-- <div class="subject">
+
+      <form [formGroup]="form" (ngSubmit)="submitForm()" class="formatodos" method="post" id="contact_form" >
+        <div *ngFor="let data of Data; let i=index">
+          <label>
+            <input class="submit" type="checkbox" [value]="data.value" (change)="onCheckboxChange($event)"/>
+             {{data.name}} -->
+            <!-- <input type="submit" type="checkbox" value="Actualizar Usuario" id="form_button"  (change)="onCheckboxChange($event)" [value]="data.value" (change)="onCheckboxChange($event)" />
+            {{data.name}} -->
+            
+          <!-- </label>
+
+        </div>
+        <table><td>___________________________________________</td></table>
+        <input type="submit" value="Generar"  (click)="createPdf()">
+      </form>
+
+    </div> -->
+      <!-- <button (click)="submitQuiz()">Enviar</button> -->
+    </form>
+
+
+    <!-- (click)="modificarValor()" -->
+        
+
+        
+  </div><!-- // End #container -->
+</html>

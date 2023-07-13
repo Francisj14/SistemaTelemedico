@@ -1,0 +1,77 @@
+<!--<h2>Login de usuario</h2>
+<form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password">
+    </div>
+    <input type="submit" value="Enviar">
+</form>
+<button class="btn btn-info" (click)="onClick()">Login With Google</button>
+-->
+
+
+
+<!--<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <h2 class="active"> Sign In </h2>
+  
+      
+      <div class="fadeIn first">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Escudo_de_la_Universidad_T%C3%A9cnica_de_Ambato.png" id="icon" alt="User Icon"  height="200" width="200"/>
+      </div>
+  
+      <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+        <input type="text" id="email" class="fadeIn second" name="login" placeholder="Correo" required="required" class="form-control" formControlName="email">
+        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Constrasena" required="required" class="form-control" formControlName="password">
+        <input type="submit" class="fadeIn fourth" value="Inciar Sesion" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">
+      </form>
+  
+
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+
+
+</div>-->
+
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+
+			<form class="login" form [formGroup]="formLogin" (ngSubmit)="onSubmit()" >
+				<div class="login__field">
+		      <input type="text" name="login" id="email" class="form-control" required="required" class="login__input" placeholder="Correo" formControlName="email">
+				</div>
+				<div class="login__field">
+				<input type="password" name="login" id="password" class="form-control" required="required" class="login__input" placeholder="Constrasena" formControlName="password">	
+			</div>
+					<button type="submit" (click)="onSubmit()" class="button login__submit"  value="Inciar Sesion" ariaCurrentWhenActive="page">
+					<span class="button__text">Inciar Sesion</span>
+				</button>				
+			</form>
+
+
+
+			<div class="social-login">
+				<h3></h3>
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>

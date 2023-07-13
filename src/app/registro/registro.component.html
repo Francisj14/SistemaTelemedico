@@ -1,0 +1,92 @@
+<html>
+  <div id="container">
+    <h1>&bull; Consulta Externa &bull;</h1>
+    <div class="underline">
+    </div>
+    <div class="icon_wrapper">
+  
+  
+      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon" viewBox="0 0 90 90"  >
+   <path fill="#231F20" d="M60,16H48V4c0-2.211-1.789-4-4-4H20c-2.211,0-4,1.789-4,4v12H4c-2.211,0-4,1.789-4,4v40c0,2.211,1.789,4,4,4
+     h56c2.211,0,4-1.789,4-4V20C64,17.789,62.211,16,60,16z M24,8h16v8H24V8z M40,44h-4v4c0,2.211-1.789,4-4,4s-4-1.789-4-4v-4h-4
+     c-2.211,0-4-1.789-4-4s1.789-4,4-4h4v-4c0-2.211,1.789-4,4-4s4,1.789,4,4v4h4c2.211,0,4,1.789,4,4S42.211,44,40,44z"/>
+   </svg>
+    </div>
+    <form action="#" method="post" id="contact_form">
+      <div class="name">
+        <label for="name"></label>
+        <input type="text" placeholder="Cedula" name="name" id="name_input" required [(ngModel)]="id">
+      </div>
+      <div class="email">
+        <label for="email"></label>
+        <input type="submit" value="Consultar Usuario" id="form_button" (click)="getUsuarios(id)" />
+      </div>
+    </form>
+    
+      <table id="tablainfoPer" class="tabla1" *ngIf="tablaVisible">
+        <tr><th>Informacion de Usuario</th></tr>
+        <tr><td>Nombres</td><td             *ngFor="let item of pers$ | async" maxlength="30"  >{{item.Nombres}}
+          <!-- <input type="text" name="telefono" *ngFor="let item of pers$ | async" maxlength="30" value={{item.Nombres}} readonly/> -->
+        </td></tr>
+        <tr><td>Apellidos</td><td              *ngFor="let item of pers$ | async" maxlength="30"  readonly id="apellido">{{item.Apellidos}}</td></tr>
+        <tr><td>Fecha de Nacimiento</td><td              *ngFor="let item of pers$ | async" maxlength="30"  readonly>{{item.birth}}</td></tr>
+        <tr><td>Lugar de nacimiento</td><td              *ngFor="let item of pers$ | async" maxlength="30"  readonly>{{item.place}}</td></tr>
+        <tr><td>Nacionalidad</td><td              *ngFor="let item of pers$ | async" maxlength="30"  readonly>{{item.nac}}</td></tr>
+        <tr><td>Edad</td><td              *ngFor="let item of pers$ | async" maxlength="30"  readonly>{{item.edad}}</td></tr>
+        <tr><td>Sexo</td><td              *ngFor="let item of pers$ | async" maxlength="30"  readonly>{{item.sex}}</td></tr>
+
+        </table>
+        <form action="#" method="post" id="contact_form"> 
+          <div class="telephone">
+            <label for="name"></label>
+            <input type="text" placeholder="Registro para primeras admisiones" name="telephone" id="telephone_input" readonly>
+          </div>
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="Telefono" name="name" id="name_input" required [(ngModel)]="telf01">
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="email" placeholder="Ocupacion" name="email" id="email_input" required [(ngModel)]="ocupacion">
+          </div>
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="Contacto de emergencia" name="name" id="name_input" required [(ngModel)]="cont">
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="email" placeholder="Parentesco" name="email" id="email_input" required [(ngModel)]="parent">
+          </div>
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="Direccion de Contacto" name="name" id="name_input" required [(ngModel)]="dircon">
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="email" placeholder="Telefono de contacto" name="email" id="email_input" required [(ngModel)]="telfcon">
+          </div>
+          <div class="telephone">
+            <label for="name"></label>
+            <input type="text" placeholder="Empresa" name="telephone" id="telephone_input" required required [(ngModel)]="empresa">
+          </div>
+          <div class="subject">
+            <label for="subject"></label>
+            <select placeholder="Subject line" name="subject" id="subject_input" required [(ngModel)]="opcionSeleccionada"  [ngModelOptions]="{standalone: true}" (ngModelChange)="opcionCambiada()">
+              <option disabled hidden selected>Tipo de seguro Social</option>
+              <option *ngFor="let opcion of opciones" [value]="opcion">{{ opcion }}</option>
+            </select>
+          </div>
+
+          <div class="subject">
+            <label for="subject"></label>
+            <select [(ngModel)]="opcionSeleccionadaec"  [ngModelOptions]="{standalone: true}" (ngModelChange)="opcionCambiada()">
+              <option *ngFor="let opcion of opciones2" [value]="opcion">{{ opcion }}</option>
+            </select>
+          </div>
+
+          <div class="submit">
+            <input type="submit" value="Actualizar Usuario" id="form_button" (click)="modificarValor()" (click)="createPdf()"/>
+          </div>
+      </form><!-- // End form -->
+  </div><!-- // End #container -->
+</html>
